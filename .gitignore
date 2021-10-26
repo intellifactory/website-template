@@ -1,3 +1,6 @@
 /node_modules/*
-/public/*
+/public/zospace-assets/*
+/public/robots.txt
+/public/favicon*
+/public/js/*
 /src/.gitignore
