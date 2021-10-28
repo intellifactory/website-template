@@ -326,3 +326,18 @@
     margin-bottom: 1.5rem;
     overflow: auto;
 }
+
+.success-alert {
+    @apply py-3 px-5 mb-4 bg-green-100 text-green-900 text-sm rounded-md border border-green-200;
+}
+
+.error-alert {
+    @apply py-3 px-5 mb-4 text-sm rounded-md border;
+
+    --tw-text-opacity: 1;
+    --tw-bg-opacity: 1;
+    --tw-border-opacity: 1;
+    border-color: rgba(254, 202, 202, var(--tw-border-opacity));
+    background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+    color: rgba(6, 78, 59, var(--tw-text-opacity));
+}

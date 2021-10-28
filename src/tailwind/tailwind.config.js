@@ -3,6 +3,8 @@ module.exports = {
         content: ['./src/*.pug'],
         safelist: [
             'markdown',
+            'success-alert',
+            'error-alert',
         ]
     },
     darkMode: false, // or 'media' or 'class'
