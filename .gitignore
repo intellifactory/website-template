@@ -3,3 +3,4 @@
 /public/favicon*
 /public/js/*
 /src/.gitignore
+/shuffle*
