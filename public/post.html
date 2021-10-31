@@ -1,4 +1,4 @@
-
+﻿
 <html lang="en">
   <head>
     <title>Page title</title>
@@ -8,9 +8,10 @@
     <meta name="author" content=""/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&amp;subset=latin"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"/>
-    <link rel="stylesheet" href="css/tailwind/tailwind.min.css"/>
+    <link rel="stylesheet" href="/css/tailwind/tailwind.min.css"/>
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-tailwind.png"/>
-    <script src="js/main.js"></script>
+    <script ws-replace="Head"></script>
+    <script src="/js/main.js"></script>
   </head>
   <body class="antialiased bg-body text-body font-body">
     <div>
@@ -60,7 +61,7 @@
         <div class="container px-4 mx-auto">
           <div class="max-w-4xl mx-auto text-center">
             <h2 class="mb-14 text-6xl lg:text-7xl font-bold font-heading text-white">${Title}</h2>
-            <div class="inline-flex mb-14 lg:mb-20 items-center"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/%24%7BAuthorUsernameForAvatar%7D.png" alt="${AuthorName}"/>
+            <div class="inline-flex mb-14 lg:mb-20 items-center"><img class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full" src="/img/avatar/${AuthorUsernameForAvatar}.png" alt="${AuthorName}"/>
               <div class="flex-1 text-left">
                 <h4 class="mb-1 text-2xl font-bold text-gray-50">${AuthorName}</h4>
                 <p class="text-white">${Date}</p>
@@ -71,7 +72,7 @@
               </div>
             </div>
           </div>
-          <div class="relative h-96 mb-20"><img class="w-full h-full object-cover" src="/img/category%24%7BCategoryNo%7D.jpg" alt=""/></div>
+          <div class="relative h-96 mb-20"><img class="w-full h-full object-cover" src="/img/category${CategoryNo}.jpg" alt=""/></div>
           <div class="max-w-4xl mx-auto markdown" ws-hole="Content">
             <p class="mb-6 text-left text-xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim quidem doloremque, corporis sapiente, maiores soluta hic rerum non, sit cum ex deleniti. Quod!</p>
             <p class="mb-6 text-left text-xl text-gray-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime id qui deserunt iure cupiditate vero. Id deleniti aliquid iste dolore! Tempore vel non atque laboriosam. Magnam, beatae explicabo.</p>
@@ -79,7 +80,8 @@
           </div>
         </div>
       </section>
-      <section class="2xl:py-20 py-5">
+      <div ws-replace="FooterPlaceholder"></div>
+      <section class="2xl:py-20 py-5" ws-template="Footer">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap -mx-4 border-b border-gray-100 pt-5 lg:pt-10">
             <div class="w-full lg:w-3/5 px-4">
@@ -142,5 +144,8 @@
         </div>
       </section>
     </div>
+    <div class="bottom" ws-replace="Cookie"></div>
+    <script ws-replace="scripts"></script>
+    <script src="/js/Dynamic.min.js"></script>
   </body>
 </html>
