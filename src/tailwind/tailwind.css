@@ -333,3 +333,64 @@
 .text-red-100 {
   color: #fee2e2;
 }
+.success-alert {
+    @apply py-3 px-5 mb-4 bg-green-100 text-green-900 text-sm rounded-md border border-green-200;
+}
+
+.error-alert {
+    @apply py-3 px-5 mb-4 text-sm rounded-md border;
+
+    --tw-text-opacity: 1;
+    --tw-bg-opacity: 1;
+    --tw-border-opacity: 1;
+    border-color: rgba(254, 202, 202, var(--tw-border-opacity));
+    background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+    color: rgba(6, 78, 59, var(--tw-text-opacity));
+}
+
+.btn-disabled {
+    @apply cursor-not-allowed opacity-50;
+}
+
+.input-failed-validation {
+    --tw-bg-opacity: 1;
+
+    border-color: red;
+    background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+}
+
+.text-red {
+    color: red;
+}
+
+.modal {
+    @apply h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50;
+}
+
+.modal.hidden {
+    display: none !important;
+}
+
+.modal .modal-container {
+    @apply bg-white rounded shadow-lg w-10/12 md:w-1/3;
+}
+
+.modal .modal-header {
+    @apply border-b px-4 py-2 flex justify-between items-center;
+}
+
+.modal .modal-title {
+    @apply font-semibold text-lg;
+}
+
+.modal .modal-content {
+    @apply p-3;
+}
+
+.modal .modal-footer {
+    @apply flex justify-end items-center w-full border-t p-3;
+}
+
+.modal .modal-button {
+    @apply bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded text-white;
+}
