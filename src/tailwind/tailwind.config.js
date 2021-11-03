@@ -1,8 +1,14 @@
 module.exports = {
     purge: {
-        content: ['./src/*.pug'],
+        content: ['./public/*.html'],
         safelist: [
             'markdown',
+            'success-alert',
+            'error-alert',
+            'btn-disabled',
+            'input-failed-validation',
+            'modal',
+            'text-red',
         ]
     },
     darkMode: false, // or 'media' or 'class'
