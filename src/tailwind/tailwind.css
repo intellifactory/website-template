@@ -313,6 +313,19 @@
     font-family: "DM Sans";
     list-style: decimal !important;
     padding: unset;
+    padding-left: 1em;
+}
+.markdown ol[type="a" s] {
+    list-style: lower-latin !important;
+}
+.markdown ol[type="A" s] {
+    list-style: upper-latin !important;
+}
+.markdown ol[type="i" s] {
+    list-style: lower-roman !important;
+}
+.markdown ol[type="I" s] {
+    list-style: upper-roman !important;
 }
 
 .markdown ul {
@@ -320,11 +333,35 @@
     font-family: "DM Sans";
     list-style: disc !important;
     padding: unset;
+    padding-left: 1em;
+}
+.markdown ul ul {
+    list-style: circle !important;
 }
 
 .markdown pre {
     margin-bottom: 1.5rem;
     overflow: auto;
+}
+
+.markdown table {
+    @apply text-gray-200;
+}
+
+.markdown h1 {
+    @apply text-5xl mb-4 leading-tight font-bold font-heading text-gray-200;
+}
+.markdown h2 {
+    @apply text-4xl mb-4 leading-tight font-bold font-heading text-gray-200;
+}
+.markdown h3 {
+    @apply text-3xl mb-4 leading-tight font-bold font-heading text-gray-200;
+}
+.markdown h4 {
+    @apply text-2xl mb-4 leading-tight font-bold font-heading text-gray-200;
+}
+.markdown h5 {
+    @apply text-xl mb-4 leading-tight font-bold font-heading text-gray-200;
 }
 
 .bg-red-600 {
