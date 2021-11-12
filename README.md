@@ -1,50 +1,24 @@
-# https://shuffle.dev
+# How to update the development branch
 
-NOTE: npm commands overwrite the ./public directory.
+0. Apply changes on master:
 
-## 1. Getting Started
+   1. Update src/*.pug + CSS files
 
-Project's source files are placed in ./src/ directory. 
+   2. Run `dotnet fsi fixup.fsx`
 
-* ./src/assets - default static files (eg. image placeholders). You should replace them with your own files.
+   3. Run `build.bat` to generate output into `public`
 
-* ./src/tailwind/ - Tailwind config file used to build the theme. Variables used in Theme Customizer are located in tailwind.config.js file.
+   4. Run `dotnet fsi fixup.fsx` in `public`
 
-* ./src/*.pug - All your pages (templates) are stored in separated .pug files.
+   5. Commit changes (but review first!)
 
-## 2. Installation
+1. `git cherry-pick <commit-hash-to-apply>` - use the commit from master you want to apply, or a hash..hash pair for a range of commits.
 
-```
-# Install dependencies
-npm install 
+2. Resolve conflicts, if any. Use VS Code to help with diffs and staging changes.
 
-# Run dev server with live preview (Browsersync)
-npm run watch
+3. `git push` to push out your resolved changes.
 
-# Or make a production build 
-npm run build
-```
+4. `git tag merged` on *master*
 
-If you want PurgeCSS to delete unnecessary CSS classes (and create a smaller CSS file as a result) set NODE_ENV to production, e.g:
+5. `git push origin merged` on *master*
 
-```
-# Make a production build and automatically use PurgeCSS
-# to remove CSS classes that aren't used.
-
-NODE_ENV=production npm run build
-```
-
-## 3. Contact
-
-If you have found any bugs in the Tailwind Builder, have any questions, 
-comments or ideas for new features feel free to contact us:
-
-support@shuffle.dev
-
-## 4. Credits & Special thanks
-
-We use placeholders from:
-
-Icons: https://webkul.github.io/vivid/
-Pictures: https://unsplash.com/
-Illustrations: https://undraw.co/illustrations
