@@ -15,8 +15,11 @@ html(lang="en")
             div(ws-replace="MenubarPlaceholder") MenubarPlaceholder
             section(ws-template="Menubar", class="px-4 lg:px-10 bg-gray-800 px-2")
                 nav(class="relative flex justify-between items-center py-2")
-                    a(class="text-2xl text-white font-bold", href="#")
-                        img(style="height:3rem;margin:-0.65rem 0 -0.65rem 0;", src="/img/if-logo.png", alt="IntelliFactory")
+                    a(class="text-2xl text-white font-bold", href="/")
+                        img(style="height:3rem;margin:-0.65rem 0 -0.65rem 0;", src="/img/if-logo.png")
+                        span(class="") Intelli
+                        |             
+                        span(class="text-blue-500 -ml-1") Factory
                     div(class="lg:hidden")
                         button(class="p-2 navbar-burger")
                             svg(class="w-10 h-3", width="39", height="13", viewbox="0 0 39 13", fill="none", xmlns="http://www.w3.org/2000/svg")
@@ -32,13 +35,11 @@ html(lang="en")
                                 a(class="text-white font-bold text-lg", href="/blogs") Blogs
                             li
                                 a(class="text-white font-bold text-lg", href="/contact") Contact
-                    div(class="hidden lg:block")
-                        a(class="inline-block px-12 text-white font-bold border border-gray-200 hover:border-white rounded-full py-2", href="#") Sign Up
                 div(class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50")
                     div(class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80")
                     nav(class="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto")
                         div(class="flex items-center mb-16 pr-6")
-                            a(class="ml-10 text-2xl text-gray-800 font-bold", href="#")
+                            a(class="ml-10 text-2xl text-gray-800 font-bold", href="/")
                                 img(class="h-7", src="/img/if-logo-long.png", alt="IntelliFactory")
                         div
                             ul
@@ -51,9 +52,6 @@ html(lang="en")
                                 li(class="mb-1 px-10")
                                     a(class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl", href="/contact") Contact
                         div(class="mt-auto px-10")
-                            div(class="pt-6")
-                                a(class="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full", href="#") Sign in
-                                a(class="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200", href="#") Sign up
                             p(class="mt-6 mb-4 text-lg text-center")
                                 span 2004-2021 © IntelliFactory. All rights reserved.
             section(class="pb-20 bg-gray-800")
@@ -63,14 +61,12 @@ html(lang="en")
                             span(class="text-lg font-bold text-blue-400") Get the F# expertise you deserve
                             h2(class="max-w-2xl mt-12 mb-12 text-6xl 2xl:text-8xl text-white font-bold font-heading") Bring your team up to speed on F#
                             p(class="mb-12 lg:mb-16 2xl:mb-24 text-xl text-gray-100") Helping businesses grow and solving problems with F# since 2004.
-                            a(class="inline-block px-10 py-4 text-2xl text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200", href="#") Learn how
-                            |             
-                            a(class="inline-block ml-5 px-10 py-4 text-2xl text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200", href="#") Trainings
                         div(class="w-full lg:w-1/3 px-4")
                             img(class="w-full p-10", src="https://ai.intellifactorylabs.com/img/if-logo.png", alt="")
             section(class="relative overflow-hidden")
                 div(class="hidden lg:block absolute right-0 bottom-0 h-full w-full lg:w-4/12")
                     img(class="h-full w-full object-cover", src="https://images.unsplash.com/photo-1596485206311-2da5fafb3606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80", alt="")
+                img(class="hidden lg:block absolute top-0 left-0 w-1/5", src="zospace-assets/images/map.svg", alt="")
                 div(class="relative container px-4 mx-auto")
                     div(class="max-w-5xl mx-auto")
                         div(class="flex flex-wrap -mx-4 py-20 2xl:py-40")
@@ -100,20 +96,20 @@ html(lang="en")
                                     form(action="#")
                                         h3(class="mb-10 text-2xl font-bold font-heading") How can we help you?
                                         p(class="mb-10 font-bold") Send us your idea and we will get back to you as soon as we can.
+                                        label(class="block text-base mb-3 ml-4", for="name") Your name:
+                                        input(type="text", name="name", placeholder="Name", class="mb-4 w-full py-4 bg-white border font-bold placeholder-gray-900 rounded-full focus:outline-none px-4 placeholder-opacity-25")
                                         label(class="block text-base mb-3 ml-4", for="email") Your email:
                                         input(type="email", name="email", placeholder="example@shuffle.dev", class="mb-4 w-full py-4 bg-white border font-bold placeholder-gray-900 rounded-full focus:outline-none px-4 placeholder-opacity-25")
                                         label(class="block text-base mb-3 ml-4", for="subject") What can we help with?
                                         input(type="text", name="subject", placeholder="Subject", class="mb-4 w-full py-4 bg-white border font-bold placeholder-gray-900 rounded-full focus:outline-none px-4 placeholder-opacity-25")
                                         label(class="block text-base mb-3 ml-4", for="message") Type your message below:
-                                        textarea(name="message", cols="30", rows="10", placeholder="Your message", class="w-full mb-6 py-4 border font-bold placeholder-gray-900 rounded-3xl resize-none focus:outline-none px-4 placeholder-opacity-25 bg-white")
+                                        textarea(name="message", cols="30", rows="7", placeholder="Your message", class="w-full mb-6 py-4 border font-bold placeholder-gray-900 rounded-3xl resize-none focus:outline-none px-4 placeholder-opacity-25 bg-white")
                                         div(class="flex mb-10")
                                             input(name="accept_terms", type="checkbox", class="align-bottom h-5")
                                             p(class="pl-4 text-sm text-gray-300 max-w-md align-middle") By contacting us, you agree to our Privacy Policy and Cookies.
                                         div(class="text-right")
                                             button(class="px-12 text-white font-bold bg-blue-500 hover:bg-blue-600 transition duration-200 rounded-2xl py-3") Send
             section(class="relative py-20 2xl:py-40 bg-gray-800")
-                img(class="hidden lg:block absolute top-0 left-0 w-2/5", src="zospace-assets/images/map.svg", alt="")
-                img(class="hidden lg:block absolute top-0 left-0 mt-40 ml-40", src="zospace-assets/images/office-tag.svg", alt="")
                 div(class="relative container px-4 mx-auto")
                     div(class="text-center mb-20")
                         span(class="text-lg text-blue-400 font-bold") Get the support you need
@@ -124,11 +120,11 @@ html(lang="en")
                                 h3(class="mb-8 lg:mb-4 text-xl text-white font-bold") Want to chat with us?
                                 div(class="bg-gray-600 rounded-b-lg")
                                     img(class="h-64 w-full rounded-lg object-cover", src="https://image.freepik.com/free-photo/contacting-with-friends-via-computer_329181-14587.jpg", alt="")
-                                    div(class="px-14 py-8")
+                                    div(class="px-10 py-6")
                                         div(class="mb-6 py-px bg-gray-500")
-                                        h3(class="mb-8 lg:mb-4 text-xl text-white font-bold") Need premium support?
-                                        div(class="md:text-right")
-                                            a(class="inline-block px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white", href="#") Message
+                                        h3(class="mb-8 lg:mb-4 text-xl text-white font-bold") Hop on our Gitter channel and let's talk WebSharper!
+                                        div(class="md:text-center")
+                                            a(class="inline-block px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white", href="https://gitter.im/intellifactory/websharper") Gitter
                             div(class="w-full lg:w-1/2 px-4 pl-10")
                                 h3(class="mb-8 lg:mb-4 text-xl text-white font-bold justify-self-center") Need premium support?
                                 div(class="py-6 px-8 mb-4 bg-gray-600 rounded-lg")
@@ -153,8 +149,8 @@ html(lang="en")
                                         |                     
                                         p(class="text-lg font-bold text-white") Work with our team to resolve the issue
                         div(class="text-center")
-                            p(class="mb-4 text-xl text-gray-300") The brown fox jumps over the lazy dog.
-                            a(class="inline-flex text-blue-400 hover:text-blue-500 font-bold", href="#")
+                            p(class="mb-4 text-xl text-gray-300") .NET functional, reactive web development with WebSharper
+                            a(class="inline-flex text-blue-400 hover:text-blue-500 font-bold", href="https://websharper.com")
                                 span Learn more
                                 svg(class="ml-4 w-4 h-5", width="19", height="20", viewbox="0 0 19 20", fill="none", xmlns="http://www.w3.org/2000/svg")
                                     path(d="M18.7383 1.47342L18.7383 10.9304L17.5562 10.9304L17.5562 2.89788L0.834948 19.625L0.00154682 18.7916L16.7228 2.06448L9.28125 2.06448L9.28125 0.882355L18.1472 0.882355C18.4737 0.882355 18.7383 1.14697 18.7383 1.47342Z", fill="#1F40FF")
@@ -211,7 +207,7 @@ html(lang="en")
                         div(class="w-full md:w-3/4 mb-8 md:mb-0")
                             div(class="md:flex items-center")
                                 a(class="inline-block text-gray-900 text-xl font-bold", href="#")
-                                    img(class="h-7", src="zospace-assets/logos/zospace-dark-logo.svg", alt="", width="auto")
+                                    img(class="h-7", src="/img/if-logo-long.png", alt="IntelliFactory", width="auto")
                                 |               
                                 span(class="hidden md:inline-block mx-8 w-px h-8 bg-gray-50")
                                 p(class="hidden lg:block text-sm")
