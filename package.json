@@ -13,7 +13,7 @@
     "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output public/css/tailwind/tailwind.min.css public/css/tailwind/tailwind.css",
     "css": "npm-run-all --sequential css-*",
     "templates": "pug --pretty -o public/ src/",
-    "build": "npm-run-all --sequential clean copy-* templates css",
+    "build": "npm-run-all --sequential copy-* templates css",
     "watch": "npm-run-all build --parallel watch-templates watch-css browsersync",
     "watch-templates": "npm run templates -- --watch",
     "watch-css": "npm run css-compile -- --watch"
