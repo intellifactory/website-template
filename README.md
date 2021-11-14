@@ -18,7 +18,15 @@
 
 3. `git push` to push out your resolved changes.
 
-4. `git tag merged` on *master*
+4.  If the `merged` tag does not exist yet, create it:
+
+    `git tag merged` on *master*
+
+    otherwise, delete it and move tag to latest commit:
+
+    `git tag -d merged`
+    `git push --delete origin merged`
+    `git tag merged`
 
 5. `git push origin merged` on *master*
 
