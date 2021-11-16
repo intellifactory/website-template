@@ -12,9 +12,15 @@
 
    5. Commit changes (but review first!)
 
-1. `git cherry-pick <commit-hash-to-apply>` - use the commit from master you want to apply, or a hash..hash pair for a range of commits.
+1. On the development branch, `git fetch`, and apply the latest changes:
+
+   `git cherry-pick <commit-hash-to-apply>` - use the commit from master you want to apply, or a hash..hash pair for a range of commits.
+
+   Don't forget to run `git cherry-pick --continue` to finish your merge, if need to.
 
 2. Resolve conflicts, if any. Use VS Code to help with diffs and staging changes.
+
+   Always regenerate CSS by running `generate-css.bat` instead of manually merging conflicts.
 
 3. `git push` to push out your resolved changes.
 
