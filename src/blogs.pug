@@ -61,7 +61,7 @@ html(lang="en")
                                 div(class="max-w")
                                     span(class="text-lg font-bold text-blue-500") 2006 - Present
                                     h2(class="mt-12 mb-10 text-6xl font-bold font-heading") IntelliFactory blogs
-                                    p(class="mb-16 text-xl text-gray-500") Read about what we have been doing with F# and what keeps us busy nowadays. We hope you will find some valuable insights that help you become a better F# web developer.
+                                    p(class="mb-16 text-xl text-gray-500") Read about what we have been doing with F# and what keeps us busy these days. Developer to developer insights, tips, and best practices from our F# team.
                                     div(class="p-6 shadow bg-white rounded mr-10 max-w-xs")
                                         div(class="flex justify-between")
                                             p(class="text-sm md:text-base text-blueGray-400") Articles
@@ -110,9 +110,10 @@ html(lang="en")
                                                 span(class="m-1 bg-gray-100 hover:bg-gray-200 rounded-full px-2 font-bold text-sm leading-loose cursor-pointer") #kinglandings
                                     li(class="flex pb-5")
                                         div(class="max-w")
-                                            h3(class="mb-6 text-lg font-bold font-heading") Products and libraries
-                                            p(class="text-lg") TODO
-            section(class="pt-16 pb-20 bg-blueGray-50")
+                                            h3(class="mb-6 text-lg font-bold font-heading") Fun topics
+                                            p(class="text-lg", ws-hole="TopicsHTML") Topics
+            div(ws-replace="Feature_FSAdvent") Feature_FSAdvent
+            section(ws-template="FSAdventBlock", class="pt-16 pb-20 bg-blueGray-50")
                 div(class="container px-4 mx-auto")
                     div(class="flex flex-wrap items-center mb-12")
                         div(class="w-full lg:w-1/2 mb-6 lg:mb-0")
@@ -123,76 +124,92 @@ html(lang="en")
                         div(class="w-full lg:w-1/2")
                             p(class="lg:pl-16 text-blueGray-400 leading-loose")
                                 a(href="https://sergeytihon.com/fsadvent/") F# Advent
-                                |  is a full month of F# community content each year, organized by Sergey Tihon. Below are our yearly contributions.
+                                |  is a full month of F# community content each year, organized by 
+                                a(href="https://github.com/sergey-tihon") Sergey Tihon
+                                | . Below are our yearly contributions.
                                 |               
-                    div(class="flex flex-wrap -mx-3 -mb-6")
-                        div(class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6")
+                    div(ws-hole="Articles", class="flex flex-wrap -mx-3 -mb-6")
+                        div(ws-template="FSAdventArticle", class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6")
                             div(class="relative pt-8 px-6 pb-6 bg-white text-left rounded shadow")
-                                div(class="absolute top-1 right-1 font-bold text-4xl opacity-10 -z-index-1") 2020
-                                div(class="inline-flex mb-1 lg:mb-2 items-center")
-                                    img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/granicz.png", alt="Adam Granicz")
-                                    div(class="flex-1 text-left")
-                                        h4(class="text-lg font-bold text-blueGray-400") Adam Granicz
-                                a(href="/user/granicz/20201231-variations-for-a-websharper-shopping-cart")
-                                    h3(class="mb-2 text-2xl font-bold font-heading") Variations for a WebSharper shopping cart
-                                p(class="text-blueGray-400") Dec 31, 2020
+                                div(class="absolute top-1 right-1 font-bold text-4xl opacity-10 -z-index-1") ${Year}
+                                a(href="${AuthorBlogUrl}")
+                                    div(class="inline-flex mb-1 lg:mb-2 items-center")
+                                        img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/${Username}.png", alt="${AuthorName}")
+                                        div(class="flex-1 text-left")
+                                            h4(class="text-lg font-bold text-blueGray-400") ${AuthorName}
+                                |                 
+                                a(href="${ArticleUrl}")
+                                    h3(class="mb-2 text-2xl font-bold font-heading") ${ArticleTitle}
+                                p(class="text-blueGray-400") ${ArticleDate}
                         div(class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6")
                             div(class="relative pt-8 px-6 pb-6 bg-white text-left rounded shadow")
                                 div(class="absolute top-1 right-1 font-bold text-4xl opacity-10 -z-index-1") 2019
-                                div(class="inline-flex mb-1 lg:mb-2 items-center")
-                                    img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/granicz.png", alt="Adam Granicz")
-                                    div(class="flex-1 text-left")
-                                        h4(class="text-lg font-bold text-blueGray-400") Adam Granicz
+                                a(href="/user/granicz")
+                                    div(class="inline-flex mb-1 lg:mb-2 items-center")
+                                        img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/granicz.png", alt="Adam Granicz")
+                                        div(class="flex-1 text-left")
+                                            h4(class="text-lg font-bold text-blueGray-400") Adam Granicz
+                                |                 
                                 a(href="/user/granicz/20191226-f-metablogging-introducing-blogengine-for-your-static-markdown-based-f-blog")
                                     h3(class="mb-2 text-2xl font-bold font-heading") F# metablogging: introducing BlogEngine for your static markdown-based F# blog
                                 p(class="text-blueGray-400") Dec 26, 2019
                         div(class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6")
                             div(class="relative pt-8 px-6 pb-6 bg-white text-left rounded shadow")
                                 div(class="absolute top-1 right-1 font-bold text-4xl opacity-10 -z-index-1") 2018
-                                div(class="inline-flex mb-1 lg:mb-2 items-center")
-                                    img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/granicz.png", alt="Adam Granicz")
-                                    div(class="flex-1 text-left")
-                                        h4(class="text-lg font-bold text-blueGray-400") Adam Granicz
+                                a(href="/user/granicz")
+                                    div(class="inline-flex mb-1 lg:mb-2 items-center")
+                                        img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/granicz.png", alt="Adam Granicz")
+                                        div(class="flex-1 text-left")
+                                            h4(class="text-lg font-bold text-blueGray-400") Adam Granicz
+                                |                 
                                 a(href="/user/granicz/20181210-from-enterprise-to-next-generation-web-celebrating-11-years-with-websharper")
                                     h3(class="mb-2 text-2xl font-bold font-heading") From enterprise to next-generation web: celebrating 11 years with WebSharper
                                 p(class="text-blueGray-400") Dec 10, 2018
                         div(class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6")
                             div(class="relative pt-8 px-6 pb-6 bg-white text-left rounded shadow")
                                 div(class="absolute top-1 right-1 font-bold text-4xl opacity-10 -z-index-1") 2017
-                                div(class="inline-flex mb-1 lg:mb-2 items-center")
-                                    img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/granicz.png", alt="Adam Granicz")
-                                    div(class="flex-1 text-left")
-                                        h4(class="text-lg font-bold text-blueGray-400") Adam Granicz
+                                a(href="/user/granicz")
+                                    div(class="inline-flex mb-1 lg:mb-2 items-center")
+                                        img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/granicz.png", alt="Adam Granicz")
+                                        div(class="flex-1 text-left")
+                                            h4(class="text-lg font-bold text-blueGray-400") Adam Granicz
+                                |                 
                                 a(href="/user/granicz/20171229-serving-spas")
                                     h3(class="mb-2 text-2xl font-bold font-heading") Serving SPAs
                                 p(class="text-blueGray-400") Dec 29, 2017
                         div(class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6")
                             div(class="relative pt-8 px-6 pb-6 bg-white text-left rounded shadow")
                                 div(class="absolute top-1 right-1 font-bold text-4xl opacity-10 -z-index-1") 2016
-                                div(class="inline-flex mb-1 lg:mb-2 items-center")
-                                    img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/granicz.png", alt="Adam Granicz")
-                                    div(class="flex-1 text-left")
-                                        h4(class="text-lg font-bold text-blueGray-400") Adam Granicz
+                                a(href="/user/granicz")
+                                    div(class="inline-flex mb-1 lg:mb-2 items-center")
+                                        img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/granicz.png", alt="Adam Granicz")
+                                        div(class="flex-1 text-left")
+                                            h4(class="text-lg font-bold text-blueGray-400") Adam Granicz
+                                |                 
                                 a(href="/user/granicz/20161231-simple-reactive-scenarios-with-websharper")
                                     h3(class="mb-2 text-2xl font-bold font-heading") Simple reactive scenarios with WebSharper
                                 p(class="text-blueGray-400") Dec 31, 2016
                         div(class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6")
                             div(class="relative pt-8 px-6 pb-6 bg-white text-left rounded shadow")
                                 div(class="absolute top-1 right-1 font-bold text-4xl opacity-10 -z-index-1") 2016
-                                div(class="inline-flex mb-1 lg:mb-2 items-center")
-                                    img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/jankoa.png", alt="Andras Janko")
-                                    div(class="flex-1 text-left")
-                                        h4(class="text-lg font-bold text-blueGray-400") Andras Janko
+                                a(href="/user/jankoa")
+                                    div(class="inline-flex mb-1 lg:mb-2 items-center")
+                                        img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/jankoa.png", alt="Andras Janko")
+                                        div(class="flex-1 text-left")
+                                            h4(class="text-lg font-bold text-blueGray-400") Andras Janko
+                                |                 
                                 a(href="/user/jankoa/20161207-distributed-web-applications-in-f-with-websharper")
                                     h3(class="mb-2 text-2xl font-bold font-heading") Distributed web applications in F# with WebSharper
                                 p(class="text-blueGray-400") Dec 7, 2016
                         div(class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6")
                             div(class="relative pt-8 px-6 pb-6 bg-white text-left rounded shadow")
                                 div(class="absolute top-1 right-1 font-bold text-4xl opacity-10 -z-index-1") 2015
-                                div(class="inline-flex mb-1 lg:mb-2 items-center")
-                                    img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/granicz.png", alt="Adam Granicz")
-                                    div(class="flex-1 text-left")
-                                        h4(class="text-lg font-bold text-blueGray-400") Adam Granicz
+                                a(href="/user/granicz")
+                                    div(class="inline-flex mb-1 lg:mb-2 items-center")
+                                        img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="/img/avatar/granicz.png", alt="Adam Granicz")
+                                        div(class="flex-1 text-left")
+                                            h4(class="text-lg font-bold text-blueGray-400") Adam Granicz
+                                |                 
                                 a(href="/user/granicz/20151226-websharper-a-year-in-review")
                                     h3(class="mb-2 text-2xl font-bold font-heading") WebSharper - a year in review
                                 p(class="text-blueGray-400") Dec 26, 2015
