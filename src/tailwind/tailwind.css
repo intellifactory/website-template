@@ -313,7 +313,7 @@
     font-family: "DM Sans";
     list-style: decimal !important;
     padding: unset;
-    padding-left: 1em;
+    padding-left: 1.5em;
 }
 .markdown ol[type="a"] {
     list-style: lower-latin !important;
@@ -339,7 +339,7 @@
     font-family: "DM Sans";
     list-style: disc !important;
     padding: unset;
-    padding-left: 1em;
+    padding-left: 1.5em;
 }
 .markdown ul ul {
     list-style: circle !important;
@@ -350,24 +350,82 @@
     overflow: auto;
 }
 
-.markdown table {
-    @apply text-gray-200;
+.markdown blockquote {
+    padding: 10px 20px;
+    padding-left: 20px;
+    margin-left: 0;
+    position: relative;
+    padding-left: 50px;
+    background-color: rgb(241, 245, 247);
+    border-left: 4px rgb(55, 81, 126) solid;
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+.markdown blockquote p {
+    margin-bottom: unset;
+    margin-left: 0.75em;
+}
+
+.markdown .quote p {
+    margin-bottom: unset;
+}
+
+.markdown blockquote::before {
+    content: open-quote;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    text-transform: none;
+    position: absolute;
+    margin-left: -30px;
+    font-size: 3em;
+    transform: translateY(-55%) rotate(180deg);
+}
+
+.markdown table>tbody>tr>td,
+.markdown table>tbody>tr>th,
+.markdown table>tfoot>tr>td,
+.markdown table>tfoot>tr>th,
+.markdown table>thead>tr>td,
+.markdown table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
 }
 
 .markdown h1 {
-    @apply text-5xl mb-4 leading-tight font-bold font-heading text-gray-200;
+    @apply text-5xl mb-4 leading-tight font-bold font-heading;
 }
 .markdown h2 {
-    @apply text-4xl mb-4 leading-tight font-bold font-heading text-gray-200;
+    @apply text-4xl mb-4 leading-tight font-bold font-heading;
 }
 .markdown h3 {
-    @apply text-3xl mb-4 leading-tight font-bold font-heading text-gray-200;
+    @apply text-3xl mb-4 leading-tight font-bold font-heading;
 }
 .markdown h4 {
-    @apply text-2xl mb-4 leading-tight font-bold font-heading text-gray-200;
+    @apply text-2xl mb-4 leading-tight font-bold font-heading;
 }
 .markdown h5 {
-    @apply text-xl mb-4 leading-tight font-bold font-heading text-gray-200;
+    @apply text-xl mb-4 leading-tight font-bold font-heading;
+}
+
+.markdown h1:not(:first-child),
+.markdown h2:not(:first-child),
+.markdown h3:not(:first-child),
+.markdown h4:not(:first-child),
+.markdown h5:not(:first-child),
+.markdown h6:not(:first-child) {
+    margin-top: 1em;
+}
+
+
+a {
+    text-decoration: underline;
+    color: rgb(71, 178, 228);
 }
 
 .bg-red-600 {
