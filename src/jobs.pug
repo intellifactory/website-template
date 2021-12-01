@@ -33,6 +33,8 @@ html(lang="en")
                             li
                                 a(class="text-white font-bold text-lg", href="/blogs") Blogs
                             li
+                                a(class="text-white font-bold text-lg", href="/careers") Careers
+                            li
                                 a(class="text-white font-bold text-lg", href="/contact") Contact
                 div(class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50")
                     div(class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80")
@@ -48,6 +50,8 @@ html(lang="en")
                                     a(class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl", href="/oss") Open Source
                                 li(class="mb-1 px-10")
                                     a(class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl", href="/blogs") Blogs
+                                li(class="mb-1 px-10")
+                                    a(class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl", href="/careers") Careers
                                 li(class="mb-1 px-10")
                                     a(class="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl", href="/contact") Contact
                         div(class="mt-auto px-10")
@@ -102,24 +106,28 @@ html(lang="en")
                                     img(class="w-full md:w-1/2 lg:w-2/3 h-64 p-2 object-cover rounded-4xl lg:rounded-br-none", src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80", alt="")
                                     img(class="w-full md:w-1/2 lg:w-1/3 h-64 p-2 object-cover rounded-4xl lg:rounded-bl-none", src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1190&q=80", alt="")
             div
-                div(class="flex flex-wrap -mx-4 -mb-4 md:mb-0")
-                    div(class="w-full md:w-1/3 px-4 mb-4 md:mb-0")
-                    div(class="w-full md:w-2/3 px-4 mb-4 md:mb-0")
-                        form(id="JobSendFiles")
+                div(class="flex flex-wrap -mb-4 md:mb-0")
+                    div(class="relative w-full md:w-1/3 mb-4 md:mb-0 overflow-hidden")
+                        img(class="lg:absolute top-0 my-12 lg:my-0 h-full w-full rounded-3xl lg:rounded-none object-cover", src="https://images.unsplash.com/photo-1572521165329-b197f9ea3da6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80", alt="")
+                    div(class="w-full md:w-2/3 px-8 mb-4 py-16 md:mb-0")
+                        div(class="mb-16 max-w-4xl mx-auto text-left")
+                            span(class="text-blue-600 font-bold") Send us your resume
+                            h2(class="text-4xl lg:text-5xl font-bold font-heading") Join IntelliFactory
+                        form(class="mx-auto", id="JobSendFiles")
                             div(class="mb-6")
                                 label(class="block text-base mb-3 ml-6", for="") Name
-                                input(class="placeholder-opacity-25 block w-full bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none", type="text", name="field-name", placeholder="Your name")
+                                input(class="placeholder-opacity-25 block w-full max-w-xl bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none", type="text", name="field-name", placeholder="Your name")
                             div(class="mb-6")
                                 label(class="block text-base mb-3 ml-6", for="") Email
-                                input(class="placeholder-opacity-25 block w-full bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none", type="text", name="field-name", placeholder="Your email address")
+                                input(class="placeholder-opacity-25 block w-full max-w-xl bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none", type="text", name="field-name", placeholder="Your email address")
                             div(class="mb-6")
                                 label(class="block text-base mb-3 ml-6", for="")
                                     | GitHub id 
                                     i(class="text-italics") (optional)
-                                input(class="placeholder-opacity-25 block w-full bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none", type="text", name="field-name", placeholder="Your GitHub username")
+                                input(class="placeholder-opacity-25 block w-full max-w-xl bg-white px-6 py-4 font-bold placeholder-gray-900 border border-gray-50 rounded-full focus:outline-none", type="text", name="field-name", placeholder="Your GitHub username")
                             div(class="mb-6")
                                 label(class="block text-base mb-3 ml-6", for="") Files
-                                div(class="border-dashed border-2 border-gray-400 py-12 flex flex-col justify-center items-center")
+                                div(class="border-dashed border-2 border-gray-400 py-12 max-w-xl flex flex-col justify-center items-center")
                                     p(class="mb-3 font-semibold text-gray-900 flex flex-wrap justify-center")
                                         span Drag and drop your
                                         |  
@@ -127,8 +135,8 @@ html(lang="en")
                                     input(id="hidden-input", type="file", multiple="multiple", class="hidden")
                                     button(id="button", class="mt-2 rounded-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 focus:shadow-outline focus:outline-none")                     Upload a file
                                     |                   
-                            div(class="mt-12 mb-6")
-                                a(class="px-6 py-4 bg-blue-500 hover:bg-blue-600 rounded-full text-lg text-white font-bold transition duration-200", href="#") Send
+                            div(class="mt-12 mb-6 max-w-xl flow-root")
+                                a(class="px-6 py-4 bg-blue-500 hover:bg-blue-600 rounded-full text-lg text-white font-bold transition duration-200 float-right", href="#") Send
             section
                 div(class="py-20 bg-gray-50 radius-for-skewed")
                     div(class="container mx-auto px-4")
@@ -140,7 +148,7 @@ html(lang="en")
                                 img(class="h-2xl w-full object-cover", src="https://images.unsplash.com/photo-1559136560-16ad036d85d3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80")
                                 div(class="py-12 px-6 bg-white rounded shadow text-center")
                                     h3(class="px-8 mb-4 text-2xl font-bold font-heading") Lorem ipsum dolor sit amet
-                                    p(class="text-gray-500") We support our rising talents continuously throughout the early stages of their careers and advance them to become the best functional programmers they can be. Our interns work alongside our full-time developers and learn the industry standards and best practices first-hand.
+                                    p(class="text-gray-500") We support our rising talents continuously throughout the early stages of their careers and advance them to become the best functional programmers they can be. Our interns work alongside our more senior developers and learn the industry standards and best practices first-hand.
                             div(class="flex-1 mb-8 lg:mb-0 w-full lg:w-1/3 px-4")
                                 div(class="py-12 px-6 bg-white rounded shadow text-center h-full")
                                     span(class="mb-6 inline-block p-2 rounded-lg bg-green-100")
