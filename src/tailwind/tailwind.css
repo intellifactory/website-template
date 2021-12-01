@@ -423,7 +423,7 @@
 }
 
 
-a {
+.markdown a {
     text-decoration: underline;
     color: rgb(71, 178, 228);
 }

@@ -2688,7 +2688,7 @@ video {
   margin-top: 1em;
 }
 
-a {
+.markdown a {
   text-decoration: underline;
   color: rgb(71, 178, 228);
 }
