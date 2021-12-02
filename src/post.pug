@@ -66,9 +66,11 @@ html(lang="en")
                 div(class="container px-4 mx-auto")
                     div(class="max-w-4xl mx-auto text-center")
                         div(class="inline-flex items-center")
-                            img(class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full", src="/img/avatar/${AuthorUsernameForAvatar}.png", alt="${AuthorName}")
+                            a(href="${AuthorUrl}")
+                                img(class="mr-8 w-20 lg:w-24 h-20 lg:h-24 rounded-full", src="/img/avatar/${AuthorUsernameForAvatar}.png", alt="${AuthorName}")
                             div(class="flex-1 text-left")
-                                h4(class="mb-1 text-2xl font-bold") ${AuthorName}
+                                a(href="${AuthorUrl}")
+                                    h4(class="mb-1 text-2xl font-bold") ${AuthorName}
                                 p(class="") ${Date}
                             div(class="text-right ml-20")
                                 p(class="mb-1 font-bold text-xl") Reading time:
@@ -152,26 +154,6 @@ html(lang="en")
                                     span(class="text-lg font-bold text-blueGray-400") Adam Granicz
                             h4(class="text-xl font-semibold") Nunc at arcu non ipsum auctor lacinia quis quis mi?
                             p(class="text-sm md:text-base text-blueGray-400") Oct 27, 2019 · 10 min read
-                        div(ws-template="OtherArticleBlock", class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8")
-                            a(href="${AuthorBlogUrl}")
-                                div(class="inline-flex items-center")
-                                    img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="${AuthorThumbnailUrl}", alt="${AuthorName}")
-                                    div(class="flex-1 text-left")
-                                        span(class="text-lg font-bold text-blueGray-400") ${AuthorName}
-                            |               
-                            a(href="${ArticleUrl}")
-                                h4(class="text-xl font-semibold") ${Title}
-                            p(class="text-sm md:text-base text-blueGray-400") ${Date} · ${MinutesToRead} min read
-                        div(ws-template="OtherGitHubSourceBlock", class="w-full md:w-1/2 lg:w-1/4 p-4 mb-8 bg-gray-50 rounded-3xl")
-                            a(href="${SourceUrl}")
-                                div(class="inline-flex items-center")
-                                    img(class="mr-2 w-4 h-4 lg:w-8 lg:h-8 rounded-full", src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", alt="${AuthorName}")
-                                    div(class="flex-1 text-left")
-                                        span(class="text-lg font-bold text-blueGray-400") Found a typo?
-                            h4(class="text-xl font-semibold")
-                                | This blog post is hosted on GitHub 
-                                a(href="${SourceUrl}") here
-                                | . Feel free to file a ticket or send a PR.
             div(ws-replace="FooterPlaceholder") FooterPlaceholder
             section(class="2xl:py-20 py-5", ws-template="Footer")
                 div(class="container mx-auto px-4")
