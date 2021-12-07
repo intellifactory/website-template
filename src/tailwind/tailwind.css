@@ -548,3 +548,10 @@ nav ul > li {
 .h-6 {
     height: 1.5rem;
 }
+
+#JobFiles .fileName + span {
+    @apply ml-6;
+
+    cursor: pointer;
+    color: red;
+}
