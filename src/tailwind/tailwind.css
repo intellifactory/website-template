@@ -555,3 +555,9 @@ nav ul > li {
     cursor: pointer;
     color: red;
 }
+
+@media screen and (max-width: 767px) {
+    .flex-basis-100 {
+        flex-basis: 100%;
+    }
+} 
