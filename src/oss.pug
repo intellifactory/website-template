@@ -12,6 +12,7 @@ html(lang="en")
         script(src="js/main.js")
     body(class="antialiased bg-body text-body font-body")
         div(class="")
+            div(ws-replace="MenubarPlaceholder") MenubarPlaceholder
             section(ws-template="Menubar", class="px-4 lg:px-10 bg-gray-800 px-2")
                 nav(class="relative flex justify-between items-center py-2")
                     a(class="text-2xl text-white font-bold", href="/")
@@ -25,15 +26,54 @@ html(lang="en")
                                 rect(x="19", y="11", width="20", height="2", rx="1", fill="#C4C4C4")
                     div(class="hidden lg:block ml-auto mr-1")
                         ul(class="flex items-center text-white space-x-10")
-                            li
+                            li(class="hoverable")
                                 a(class="text-white font-bold text-lg", href="/") Home
-                            li
-                                a(class="text-white font-bold text-lg", href="/oss") Open Source
-                            li
+                            li(class="hoverable-mm")
+                                a(class="text-white font-bold text-lg") Open Source
+                                div(class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-700")
+                                    div(class="container mx-auto w-full flex flex-wrap justify-between mx-2")
+                                        ul(class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3")
+                                            div(class="flex items-center")
+                                                img(class="h-8 mb-3 mr-3", src="https://api.nuget.org/v3-flatcontainer/websharper.ui/5.0.0.120/icon")
+                                                h3(class="font-bold text-xl text-white text-bold mb-2") WebSharper
+                                            p(class="text-gray-100 text-sm") Functional, reactive .NET web applications without writing JavaScript.
+                                            div(class="flex items-center py-3")
+                                                svg(class="h-6 pr-3 fill-current text-teal-300", xmlns="http://www.w3.org/2000/svg", viewbox="0 0 20 20")
+                                                    path(d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z")
+                                                a(href="https://websharper.com", class="text-white bold border-b-2 border-teal-300 hover:text-teal-900") Find out more...
+                                        ul(class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3")
+                                            div(class="flex items-center")
+                                                img(class="h-8 mb-3 mr-3", src="https://avatars.githubusercontent.com/u/45857626?")
+                                                h3(class="font-bold text-xl text-white text-bold mb-2") Bolero
+                                            p(class="text-gray-100 text-sm") Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.
+                                            div(class="flex items-center py-3")
+                                                svg(class="h-6 pr-3 fill-current text-teal-300", xmlns="http://www.w3.org/2000/svg", viewbox="0 0 20 20")
+                                                    path(d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z")
+                                                a(href="https://fsbolero.io", class="text-white bold border-b-2 border-teal-300 hover:text-teal-900") Find out more...
+                                        ul(class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3")
+                                            div(class="flex items-center")
+                                                img(class="h-8 mb-3 mr-3 fill-current text-white", src="https://i.imgur.com/E6dfA3t.jpg")
+                                                h3(class="font-bold text-xl text-white text-bold mb-2") SiteFi
+                                            p(class="text-gray-100 text-sm") Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.
+                                            div(class="flex items-center py-3")
+                                                svg(class="h-6 pr-3 fill-current text-teal-300", xmlns="http://www.w3.org/2000/svg", viewbox="0 0 20 20")
+                                                    path(d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z")
+                                                a(href="https://cloudsharper.com", class="text-white bold border-b-2 border-teal-300 hover:text-teal-900") Find out more...
+                                        ul(class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-b-0 sm:border-r md:border-b-0 pb-6 pt-6 lg:pt-3")
+                                            div(class="flex items-center")
+                                                svg(class="h-8 mb-3 mr-3 fill-current text-white", xmlns="http://www.w3.org/2000/svg", viewbox="0 0 20 20")
+                                                    path(d="M2 4v14h14v-6l2-2v10H0V2h10L8 4H2zm10.3-.3l4 4L8 16H4v-4l8.3-8.3zm1.4-1.4L16 0l4 4-2.3 2.3-4-4z")
+                                                h3(class="font-bold text-xl text-white text-bold mb-2") Cloudsharper
+                                            p(class="text-gray-100 text-sm") Thul klivian doldur thisspiasian calrissian. Garindan d8 aurra twi'lek tund polis gen'dai sola tarpals.
+                                            div(class="flex items-center py-3")
+                                                svg(class="h-6 pr-3 fill-current text-teal-300", xmlns="http://www.w3.org/2000/svg", viewbox="0 0 20 20")
+                                                    path(d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z")
+                                                a(href="https://cloudsharper.com", class="text-white bold border-b-2 border-teal-300 hover:text-teal-900") Find out more...
+                            li(class="hoverable")
                                 a(class="text-white font-bold text-lg", href="/blogs") Blogs
-                            li
+                            li(class="hoverable")
                                 a(class="text-white font-bold text-lg", href="/careers") Careers
-                            li
+                            li(class="hoverable")
                                 a(class="text-white font-bold text-lg", href="/contact") Contact
                 div(class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50")
                     div(class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80")
@@ -57,8 +97,7 @@ html(lang="en")
                             p(class="mt-6 mb-4 text-lg text-center")
                                 span 2004-2021 © IntelliFactory. All rights reserved.
             section(class="relative pb-20 overflow-hidden")
-                img(class="hidden lg:block absolute top-0 right-0 -mr-20 mt-16", src="zospace-assets/lines/line-top.svg", alt="")
-                div(class="relative lg:absolute h-128 w-full lg:w-1/2 mt-6 px-4")
+                div(class="relative lg:absolute h-128 w-full lg:w-1/2 px-4")
                     img(class="lg:absolute left-0 top-0 lg:-ml-48 w-full h-96 2xl:h-144 object-cover lg:h-128 lg:w-128", src="https://images.pexels.com/photos/7148031/pexels-photo-7148031.jpeg?q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=450&w=940", alt="")
                     div(class="absolute bottom-0 left-0 w-52 h-92 ml-10 mb-6")
                         img(src="https://images.pexels.com/photos/5325887/pexels-photo-5325887.jpeg?q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=450&w=350", alt="")
