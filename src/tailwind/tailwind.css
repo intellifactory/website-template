@@ -1,308 +1,10 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
-.stroke {
-    font-size: 30vw;
-    line-height: 1;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: rgba(0, 0, 0, 0.15);
-    -webkit-text-fill-color: transparent;
-    font-family: Impact, Charcoal, sans-serif;
-}
-
-.stroke-light {
-    font-size: 30vw;
-    line-height: 1;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.1);
-    -webkit-text-fill-color: transparent;
-    font-family: Impact, Charcoal, sans-serif;
-}
-
-.h-39 {
-    height: 156px;
-}
-
-.w-39 {
-    width: 156px;
-}
-
-.clip-path-both {
-    clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-}
-
-.clip-path-left {
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.clip-path-right {
-    clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-}
-
-.clip-path-right-top {
-    clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-}
-
-.clip-path-right-top-sm {
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-}
-
-.clip-path-right-badge {
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-}
-
-.clip-path-right-wide {
-    clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-}
-
-.clip-path-left-top {
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.clip-path-left-wide {
-    clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.clip-path-left-small {
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.clip-path-right-small {
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-}
-
-.clip-path-triangle {
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-
-.triangle-bottom {
-    clip-path: polygon(0 0, 50% 100%, 100% 0);
-}
-
-@media (min-width: 640px) {
-    .sm\:clip-path-both {
-        clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-    }
-    
-    .sm\:clip-path-left {
-        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-    }
-    
-    .sm\:clip-path-right {
-        clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-    }
-    
-    .sm\:clip-path-right-top {
-        clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-    }
-    
-    .sm\:clip-path-right-top-sm {
-        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-    }
-    
-    .sm\:clip-path-right-badge {
-        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-    }
-    
-    .sm\:clip-path-right-wide {
-        clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-    }
-    
-    .sm\:clip-path-left-top {
-        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .sm\:clip-path-left-wide {
-        clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .sm\:clip-path-left-small {
-        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .sm\:clip-path-right-small {
-        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-    }
-    
-    .sm\:clip-path-triangle {
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    }
-    
-    .sm\:triangle-bottom {
-        clip-path: polygon(0 0, 50% 100%, 100% 0);
-    }
-}
-
-@media (min-width: 768px) {
-    .md\:clip-path-both {
-        clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-    }
-    
-    .md\:clip-path-left {
-        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-    }
-    
-    .md\:clip-path-right {
-        clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-    }
-    
-    .md\:clip-path-right-top {
-        clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-    }
-    
-    .md\:clip-path-right-top-sm {
-        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-    }
-    
-    .md\:clip-path-right-badge {
-        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-    }
-    
-    .md\:clip-path-right-wide {
-        clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-    }
-    
-    .md\:clip-path-left-top {
-        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .md\:clip-path-left-wide {
-        clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .md\:clip-path-left-small {
-        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .md\:clip-path-right-small {
-        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-    }
-    
-    .md\:clip-path-triangle {
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    }
-    
-    .md\:triangle-bottom {
-        clip-path: polygon(0 0, 50% 100%, 100% 0);
-    }
-}
-
-@media (min-width: 1024px) {
-    .lg\:clip-path-both {
-        clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-    }
-    
-    .lg\:clip-path-left {
-        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-    }
-    
-    .lg\:clip-path-right {
-        clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-    }
-    
-    .lg\:clip-path-right-top {
-        clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-    }
-    
-    .lg\:clip-path-right-top-sm {
-        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-    }
-    
-    .lg\:clip-path-right-badge {
-        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-    }
-    
-    .lg\:clip-path-right-wide {
-        clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-    }
-    
-    .lg\:clip-path-left-top {
-        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .lg\:clip-path-left-wide {
-        clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .lg\:clip-path-left-small {
-        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .lg\:clip-path-right-small {
-        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-    }
-    
-    .lg\:clip-path-triangle {
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    }
-    
-    .lg\:triangle-bottom {
-        clip-path: polygon(0 0, 50% 100%, 100% 0);
-    }
-}
-
-@media (min-width: 1280px) {
-    .xl\:clip-path-both {
-        clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-    }
-    
-    .xl\:clip-path-left {
-        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-    }
-    
-    .xl\:clip-path-right {
-        clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-    }
-    
-    .xl\:clip-path-right-top {
-        clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-    }
-    
-    .xl\:clip-path-right-top-sm {
-        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-    }
-    
-    .xl\:clip-path-right-badge {
-        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-    }
-    
-    .xl\:clip-path-right-wide {
-        clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-    }
-    
-    .xl\:clip-path-left-top {
-        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .xl\:clip-path-left-wide {
-        clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .xl\:clip-path-left-small {
-        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    
-    .xl\:clip-path-right-small {
-        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-    }
-    
-    .xl\:clip-path-triangle {
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    }
-    
-    .xl\:triangle-bottom {
-        clip-path: polygon(0 0, 50% 100%, 100% 0);
-    }
-}
-
-/* ------------------------------------
- * Make sure these style changes are carried to any update
- * of this generated file.
- */
-
+/**
+* This is a valid CSS file.
+**/
 .markdown p {
     @apply mb-6 text-left text-xl;
     font-family: "DM Sans";
@@ -313,6 +15,25 @@
     font-family: "DM Sans";
     list-style: decimal !important;
     padding: unset;
+    padding-left: 1.5em;
+}
+.markdown ol[type="a"] {
+    list-style: lower-latin !important;
+}
+.markdown ol[type="a" s] {
+    list-style: lower-latin !important;
+}
+.markdown ol[type="A" s] {
+    list-style: upper-latin !important;
+}
+.markdown ol[type="i"] {
+    list-style: lower-roman !important;
+}
+.markdown ol[type="i" s] {
+    list-style: lower-roman !important;
+}
+.markdown ol[type="I" s] {
+    list-style: upper-roman !important;
 }
 
 .markdown ul {
@@ -320,11 +41,93 @@
     font-family: "DM Sans";
     list-style: disc !important;
     padding: unset;
+    padding-left: 1.5em;
+}
+.markdown ul ul {
+    list-style: circle !important;
 }
 
 .markdown pre {
     margin-bottom: 1.5rem;
     overflow: auto;
+}
+
+.markdown blockquote {
+    padding: 10px 20px;
+    padding-left: 20px;
+    margin-left: 0;
+    position: relative;
+    padding-left: 50px;
+    background-color: rgb(241, 245, 247);
+    border-left: 4px rgb(55, 81, 126) solid;
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+.markdown blockquote p {
+    margin-bottom: unset;
+    margin-left: 0.75em;
+}
+
+.markdown .quote p {
+    margin-bottom: unset;
+}
+
+.markdown blockquote::before {
+    content: open-quote;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    text-transform: none;
+    position: absolute;
+    margin-left: -30px;
+    font-size: 3em;
+    transform: translateY(-55%) rotate(180deg);
+}
+
+.markdown table>tbody>tr>td,
+.markdown table>tbody>tr>th,
+.markdown table>tfoot>tr>td,
+.markdown table>tfoot>tr>th,
+.markdown table>thead>tr>td,
+.markdown table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.markdown h1 {
+    @apply text-5xl mb-4 leading-tight font-bold font-heading;
+}
+.markdown h2 {
+    @apply text-4xl mb-4 leading-tight font-bold font-heading;
+}
+.markdown h3 {
+    @apply text-3xl mb-4 leading-tight font-bold font-heading;
+}
+.markdown h4 {
+    @apply text-2xl mb-4 leading-tight font-bold font-heading;
+}
+.markdown h5 {
+    @apply text-xl mb-4 leading-tight font-bold font-heading;
+}
+
+.markdown h1:not(:first-child),
+.markdown h2:not(:first-child),
+.markdown h3:not(:first-child),
+.markdown h4:not(:first-child),
+.markdown h5:not(:first-child),
+.markdown h6:not(:first-child) {
+    margin-top: 1em;
+}
+
+
+.markdown a {
+    text-decoration: underline;
+    color: rgb(71, 178, 228);
 }
 
 .bg-red-600 {
@@ -333,3 +136,131 @@
 .text-red-100 {
   color: #fee2e2;
 }
+.success-alert {
+    @apply py-3 px-5 mb-4 bg-green-100 text-green-900 text-sm rounded-md border border-green-200;
+}
+
+.error-alert {
+    @apply py-3 px-5 mb-4 text-sm rounded-md border;
+
+    --tw-text-opacity: 1;
+    --tw-bg-opacity: 1;
+    --tw-border-opacity: 1;
+    border-color: rgba(254, 202, 202, var(--tw-border-opacity));
+    background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+    color: rgba(6, 78, 59, var(--tw-text-opacity));
+}
+
+.btn-disabled {
+    @apply cursor-not-allowed opacity-50;
+}
+
+.input-failed-validation {
+    --tw-bg-opacity: 1;
+
+    border-color: red;
+    background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+}
+
+.text-red {
+    color: red;
+}
+
+.modal {
+    @apply h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50;
+}
+
+.modal.hidden {
+    display: none !important;
+}
+
+.modal .modal-container {
+    @apply bg-white rounded shadow-lg w-10/12 md:w-1/3;
+}
+
+.modal .modal-header {
+    @apply border-b px-4 py-2 flex justify-between items-center;
+}
+
+.modal .modal-title {
+    @apply font-semibold text-lg;
+}
+
+.modal .modal-content {
+    @apply p-3;
+}
+
+.modal .modal-footer {
+    @apply flex justify-end items-center w-full border-t p-3;
+}
+
+.modal .modal-button {
+    @apply bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded text-white;
+}
+
+/* Hover menu */
+
+.mega-menu {
+    display: none;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    z-index: 1000;
+    top: 48;
+    color: white;
+}
+
+.mega-menu svg {
+    fill: white;
+    @apply mr-6;
+}
+
+nav ul > li {
+    height: 48px;
+    line-height: 48px;
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+}
+
+.hoverable, .hoverable-mm {
+    padding-right: 1rem;
+    margin-right: calc(2.5rem * var(--tw-space-x-reverse) - 1rem) !important;
+    padding-left: 1rem;
+    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)) - 1rem) !important;
+}
+
+.hoverable:hover, .hoverable-mm:hover {
+    @apply bg-blue-700;
+}
+
+.hoverable-mm > a:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.hoverable-mm:hover .mega-menu {
+    display: block;
+}
+
+.h-6 {
+    height: 1.5rem;
+}
+
+#JobFiles .fileName + span {
+    @apply ml-6;
+
+    cursor: pointer;
+    color: red;
+}
+
+@media screen and (max-width: 767px) {
+    .flex-basis-100 {
+        flex-basis: 100%;
+    }
+}
+
+
