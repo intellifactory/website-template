@@ -262,5 +262,6 @@ nav ul > li {
         flex-basis: 100%;
     }
 }
-
-
+.markdown img {
+    max-height: 640px;
+}
